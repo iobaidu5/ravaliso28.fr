@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/aides-financieres</loc>
+</url>
+<url>
+<loc>http://localhost:4000/bhinternet</loc>
+</url>
+<url>
+<loc>http://localhost:4000/conditions-generales-de-vente</loc>
+</url>
+<url>
+<loc>http://localhost:4000/contact</loc>
+</url>
+<url>
+<loc>http://localhost:4000/couverture-28</loc>
+</url>
+<url>
+<loc>http://localhost:4000/devis</loc>
+</url>
+<url>
+<loc>http://localhost:4000/message-envoye</loc>
+</url>
+<url>
+<loc>http://localhost:4000/galerie</loc>
+</url>
+<url>
+<loc>http://localhost:4000/isolation-thermique-exterieur-28</loc>
+</url>
+<url>
+<loc>http://localhost:4000/mentions-legales</loc>
+</url>
+</urlset>
