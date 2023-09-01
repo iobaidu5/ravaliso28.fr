@@ -33,4 +33,13 @@
 <url>
 <loc>http://localhost:4000/mentions-legales</loc>
 </url>
+<url>
+<loc>http://localhost:4000/qui-sommes-nous</loc>
+</url>
+<url>
+<loc>http://localhost:4000/service1</loc>
+</url>
+<url>
+<loc>http://localhost:4000/service2</loc>
+</url>
 </urlset>

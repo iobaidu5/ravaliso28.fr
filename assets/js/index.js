@@ -14,38 +14,90 @@ function fixNav() {
   }
 }
 
-const myCustomSlider = document.querySelectorAll('.swiper-container');
 
-for( i=0; i< myCustomSlider.length; i++ ) {
-  
-  myCustomSlider[i].classList.add('swiper-container-' + i);
-
-const swiper = new Swiper('.swiper-container-' + i, {
-  // Optional parameters
-  centeredSlides: true,
-  effect: 'coverflow',
+var owl = $(".owl");
+owl.owlCarousel({
+  items: 2,
+  navigation: false,
   loop: true,
-  slidesPerView: 3,
-
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
-  // Navigation arrows
-  navigation: {
-    enabled: false,
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+  stagePadding: 100,
+  rewind: true,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: false,
+  dots: false,
+  margin: 30,
+  // animateIn: "fadeIn",
+  // animateOut: "fadeOut",
+  // navText: [
+  //   "<i class='fas fa-chevron-left nav-left'></i>",
+  //   "<i class='fas fa-chevron-right nav-right'></i>",
+  // ],
+  responsiveClass: true,
+  responsive: {
+    200: {
+      items: 1,
+      nav: true,
+    },
+    350: {
+      items: 1,
+      nav: true,
+    },
+    380: {
+      items: 1,
+      nav: true,
+    },
+    400: {
+      items: 1,
+      nav: true,
+    },
+    768: {
+      items: 1,
+      nav: true,
+    },
+    990: {
+      items: 1,
+      nav: true,
+    },
+    1200: {
+      items: 2,
+      nav: true,
+    },
+    1600: {
+      items: 2,
+      nav: true,
+      loop: true,
+    },
   },
 });
-}
+$(".play").on("click", function () {
+  owl.trigger("play.owl.autoplay", [5000]);
+});
+$(".stop").on("click", function () {
+  owl.trigger("stop.owl.autoplay");
+});
 
+
+const myCustomSlider = document.querySelectorAll('.swiper-container');
+
+for (let i = 0; i < myCustomSlider.length; i++) {
+  myCustomSlider[i].classList.add('swiper-container-' + i);
+
+  // Initialize Swiper for each slider separately
+  const swiper = new Swiper('.swiper-container-' + i, {
+    centeredSlides: true,
+    effect: 'coverflow',
+    loop: true,
+    slidesPerView: 3,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+}
 
 
 $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
@@ -91,9 +143,9 @@ lightGallery(document.getElementById('lightgallery'))
 
         $(".form-4").hide("slow");
         $(".form-3").show("slow");
+        $("#form-1-btn").show("slow");
         $("#step4").removeClass("reservation_step-active");
         $("#step4").removeClass("reservation_step-active2");
         $("#step3").addClass("reservation_step-active");
     });
-
 
